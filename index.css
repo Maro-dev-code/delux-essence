@@ -386,7 +386,7 @@ header {
   margin: 60px auto 0;
   width: 100%;
   height: auto;
-  border: 2px solid ;
+  
 }
 
   .arrival-header {
@@ -407,7 +407,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    border: 2px solid red;
+    
 }
 
 .card {
