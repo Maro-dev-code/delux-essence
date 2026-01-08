@@ -11,6 +11,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "body-font";
+  src: url("fonts/Amorthe.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -21,6 +28,8 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
+  font-family: "body-font", sans-serif;
+  
 }
 
 .video video {
@@ -237,7 +246,7 @@ header {
 }
 
 .card {
-  width: 430px;
+  width: 450px;
   background: #fff;
   border-radius: 16px;
   padding: 12px;
@@ -251,8 +260,10 @@ header {
 }
 .card img {
   width: 100%;
-  height: 430px;
+  height: 470px;
   border-radius: 12px;
+  object-fit: cover;
+  object-position: top center;
 }
 .card h4 {
   margin: 12px 0 6px;
