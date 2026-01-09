@@ -927,7 +927,8 @@ footer{
     
 }
 
-.elegance-img, .elegance-img img {
+.elegance-img, 
+.elegance-img img {
     width: 320px;
     height: 600px;
     border-radius: 40px;
