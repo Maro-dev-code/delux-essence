@@ -51,8 +51,9 @@ header {
   background: transparent;
   align-items: center;
   font-size: 1.3rem;
-  padding: 10px 30px;
+  padding: 10px 50px;
   box-shadow: inset 0 -4px 7px rgba(255, 255, 255, 0.158);
+
 }
 
 .logo{
@@ -105,10 +106,10 @@ header {
    ABOUT HERO – BASE
 ========================= */
 
-.about-hero {
+/* .about-hero {
   height: 92vh;
   width: 100%;
-  background: transparent; /* luxury neutral */
+  background: transparent; 
   position: relative;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
@@ -118,13 +119,13 @@ header {
   height: 100%;
   width: 100%;
   position: relative;
-}
+} */
 
 /* =========================
    SLIDES
 ========================= */
 
-.about-slide {
+/* .about-slide {
   position: absolute;
   inset: 0;
   display: flex;
@@ -140,13 +141,13 @@ header {
   opacity: 1;
   pointer-events: auto;
   z-index: 1;
-}
+} */
 
 /* =========================
    TEXT CONTENT
 ========================= */
 
-.content {
+/* .content {
   max-width: 460px;
 }
 
@@ -163,10 +164,10 @@ header {
   line-height: 1.7;
   color: #444;
   margin-bottom: 38px;
-}
+} */
 
 /* CTA BUTTON */
-.btn {
+/* .btn {
   display: inline-block;
   padding: 14px 36px;
   border: 1.5px solid #111;
@@ -180,16 +181,16 @@ header {
 .btn:hover {
   background: #111;
   color: #fff;
-}
+} */
 
 /* =========================
    IMAGE SECTION – HERO SCALE
 ========================= */
 
-.images {
+/* .images {
   position: relative;
-  width: 48vw;       /* HERO WIDTH */
-  height: 68vh;      /* TALL FASHION LOOK */
+  width: 48vw;       
+  height: 68vh;      
   max-width: 980px;
 }
 
@@ -203,36 +204,36 @@ header {
   box-shadow: 0 45px 90px rgba(0,0,0,0.18);
   opacity: 0;
   transition: transform 1s ease, opacity 1s ease;
-}
+} */
 
 /* LEFT IMAGE */
-.img-left {
+/* .img-left {
   left: 0;
   transform: rotate(-8deg) translateY(-40px);
-}
+} */
 
 /* RIGHT IMAGE */
-.img-right {
+/* .img-right {
   right: 0;
   transform: rotate(8deg) translateY(40px);
-}
+} */
 
 /* ACTIVE REVEAL */
-.about-slide.active .img-left {
+/* .about-slide.active .img-left {
   opacity: 1;
   transform: rotate(-6deg) translateY(0);
-}
+} */
 
-.about-slide.active .img-right {
+/* .about-slide.active .img-right {
   opacity: 1;
   transform: rotate(6deg) translateY(0);
-}
+} */
 
 /* =========================
    SLIDER DOTS
 ========================= */
 
-.about-dots {
+/* .about-dots {
   position: absolute;
   bottom: 45px;
   left: 50%;
@@ -253,11 +254,523 @@ header {
 
 .dot.active {
   background: #111;
-}
+} */
 
 /* =========================
    RESPONSIVE – MOBILE
 ========================= */
+
+
+
+/* ===============================
+   ABOUT HERO – FOUNDATION
+================================ */
+
+.about-hero {
+  height: 90vh;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-slider {
+  height: 100%;
+  position: relative;
+}
+
+/* ===============================
+   SLIDING TRACK
+================================ */
+
+.about-track {
+  display: flex;
+  height: 100%;
+  width: 300vw; /* 3 slides */
+  transition: transform 1.1s cubic-bezier(.22,.61,.36,1);
+}
+
+/* ===============================
+   SLIDES
+================================ */
+
+.about-slide {
+  width: 100vw;
+  height: 100%;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: clamp(60px, 7vw, 120px);
+}
+
+/* ===============================
+   TEXT CONTENT
+================================ */
+
+.content {
+  max-width: 460px;
+}
+
+.content h1 {
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: #111;
+  margin-bottom: 18px;
+}
+
+/* .content h1::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: #111;
+  margin-top: 18px;
+} */
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #555;
+  margin: 28px 0 42px;
+}
+
+/* ===============================
+   CTA BUTTON
+================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 34px;
+  border: 1.2px solid #111;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: all 0.35s ease;
+}
+
+.btn::after {
+  content: "→";
+  transition: transform 0.35s ease;
+}
+
+.btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+.btn:hover::after {
+  transform: translateX(6px);
+}
+
+/* ===============================
+   IMAGE COMPOSITION (SLANTED)
+================================ */
+
+.images {
+  position: relative;
+  width: 52vw;
+  height: 72vh;
+  max-width: 960px;
+}
+
+.images img {
+  position: absolute;
+  width: 48%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.16);
+  transform-origin: center;
+  transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
+}
+
+/* LEFT IMAGE */
+.img-left {
+  left: 0;
+  transform: rotate(-7deg) translateY(24px);
+}
+
+/* RIGHT IMAGE */
+.img-right {
+  right: 0;
+  transform: rotate(7deg) translateY(-24px);
+}
+
+/* subtle life, keeps slant */
+.about-slide:hover .img-left {
+  transform: rotate(-7deg) translateY(10px);
+}
+
+.about-slide:hover .img-right {
+  transform: rotate(7deg) translateY(-10px);
+}
+
+/* ===============================
+   DOT NAVIGATION
+================================ */
+
+.about-dots {
+  position: absolute;
+  bottom: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 14px;
+  z-index: 10;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #c4c4c4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #111;
+  transform: scale(1.25);
+}
+
+
+/* ===============================
+   LEFT / RIGHT PAGINATION
+================================ */
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #111;
+  cursor: pointer;
+  padding: 20px;
+  z-index: 20;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+  opacity: 0.7;
+}
+
+/* LEFT */
+.nav-btn.prev {
+  left: 24px;
+}
+
+/* RIGHT */
+.nav-btn.next {
+  right: 24px;
+}
+
+/* subtle fade on idle */
+.about-hero:hover .nav-btn {
+  opacity: 1;
+}
+
+.nav-btn {
+  opacity: 0.5;
+}
+
+/* MOBILE – SMALLER */
+
+
+/* ===============================
+   MOBILE – CLEAN STACK
+================================ */
+
+/* ===============================
+   BRAND STORY SECTION
+================================ */
+
+.brand-story {
+  padding: clamp(80px, 10vw, 140px) 8vw;
+  background: transparent;
+}
+
+.story-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+  gap: 6vw;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* TEXT */
+.story-text {
+  max-width: 480px;
+}
+
+.story-label {
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+.story-text h2 {
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 28px;
+}
+
+.story-text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 22px;
+}
+
+.story-highlight {
+  color: #111;
+  font-weight: 500;
+}
+
+/* IMAGE */
+.story-image {
+  width: 40%;
+  max-width: 520px;
+}
+
+.story-image img {
+  width: 100%;
+  height: 600px;
+  border-radius: 14px;
+  object-fit: cover;
+
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+
+
+/* ===============================
+   BRAND VALUES SECTION
+================================ */
+
+.brand-values {
+  padding: clamp(40px, 5vw, 70px) 8vw;
+  background: transparent;
+  margin-top: -85px;
+}
+
+.values-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.values-header {
+  max-width: 600px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.values-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.values-header h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.values-header p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* CARDS GRID */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* CARD */
+.value-card {
+  background: #fffdfd;
+  border-radius: 16px;
+  padding: 36px 28px 28px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 50px rgba(0,0,0,0.12);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 18px;
+}
+
+.value-card h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.value-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+
+/* ===============================
+   BRAND IDENTITY / LUXURY CATALOGUE
+================================ */
+
+.brand-identity {
+  padding: clamp(80px, 10vw, 140px) 8vw;
+  background: transparent;
+}
+
+.identity-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.identity-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.identity-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.identity-header h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.identity-header p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* GRID */
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 220px);
+  gap: 16px;
+  grid-auto-flow: dense;
+}
+
+/* GRID ITEMS */
+.identity-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.identity-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 15% 15%;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.identity-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* ITEM SIZES */
+.identity-item.large {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.identity-item.medium {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.identity-item.small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* ROTATION FOR SMALL ACCENT IMAGES */
+.rotate-left img {
+  transform: rotate(-2deg);
+}
+
+.rotate-right img {
+  transform: rotate(2deg);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .identity-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .identity-item {
+    height: 300px;
+  }
+
+  .rotate-left img,
+  .rotate-right img {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
+
 
 
 
@@ -314,34 +827,69 @@ header {
 
 
 
+  
   .about-slide {
     flex-direction: column;
-    justify-content: center;
     text-align: center;
-    padding: 60px 30px;
+    padding: 60px 28px;
   }
 
-  .content {
-    max-width: 100%;
-    margin-bottom: 40px;
+  .content h1::after {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .images {
     width: 100%;
     height: auto;
     display: flex;
-    gap: 20px;
-    max-width: 100%;
+    gap: 18px;
+    margin-top: 40px;
   }
 
   .images img {
     position: relative;
     width: 50%;
     height: 320px;
-    transform: none !important;
-    opacity: 1;
+    transform: none;
   }
 
+    .nav-btn {
+    font-size: 2.2rem;
+    padding: 12px;
+  }
+
+    .story-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story-text {
+    max-width: 100%;
+  }
+
+  .story-image {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .brand-values {
+ 
+  margin-top: -45px;
+}
+
+   .values-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .values-header {
+    max-width: 100%;
+  }
+
+  .value-card {
+    padding: 28px 20px 20px;
+  }
  
 }
 
@@ -355,7 +903,7 @@ header {
     height: auto;
   }
 
-  .section1 {
+  .section-1 {
     max-width: 100vw;
     overflow: hidden;
   }
