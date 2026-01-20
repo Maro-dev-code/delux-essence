@@ -512,7 +512,9 @@ header {
 
 .client img {
   width: 50px;
+  height: 50px;
   border-radius: 50%;
+  object-fit: center;
 }
 
 .client h3 {
@@ -795,12 +797,39 @@ footer {
     padding: 0 13%;
 }
 
+.review-card {
+    background-color: white;
+    margin: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 13px rgb(214, 214, 214);
+    padding: 15px;
+    width: 500px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
 .review-header h2 {
     text-transform: capitalize;
-    font-size: 27px;
+    font-size: 35px;
     margin-bottom: 20px;
     text-align: center;
 }
+
+.client h3{
+  font-size: 25px;
+}
+
+.review-card p {
+    color: #464545;
+    margin-bottom: 14px;
+    font-size: 27px;
+}
+
+.review-card i{
+  font-size: 25px;
+}
+
+
 
 .comments {
     display: flex;
@@ -1180,7 +1209,7 @@ footer {
 
   footer {
     background-color: black;
-    height: 35vh;
+    height: 40vh;
     width: 100vw;
     margin-top: 60px;
     display: flex;
@@ -1245,7 +1274,7 @@ footer {
   .social-links a {
     color: rgb(214, 214, 214);
     text-decoration: none;
-    margin: 0 10px;
+    margin: -10px 10px 0;
     transition: 0.6s ease;
     font-size: 18px;
   }
