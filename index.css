@@ -815,21 +815,6 @@ footer {
     text-align: center;
 }
 
-.client h3{
-  font-size: 25px;
-}
-
-.review-card p {
-    color: #464545;
-    margin-bottom: 14px;
-    font-size: 27px;
-}
-
-.review-card i{
-  font-size: 25px;
-}
-
-
 
 .comments {
     display: flex;
