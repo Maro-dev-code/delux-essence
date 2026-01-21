@@ -118,6 +118,7 @@ header {
   align-items: center;
   gap: 10px;
   text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.637);
 }
 
 .content h1 {
@@ -127,10 +128,16 @@ header {
   font-family: "brilliant", sans-serif;
   font-weight: 200;
   font-weight: bold;
+  text-shadow:
+  -1px -1px 0px rgba(0, 0, 0, 0.925),
+  1px -1px 0px rgba(0, 0, 0, 0.925),
+  -1px 1px 0px rgba(0, 0, 0, 0.925),
+  1px 4px 0px rgba(0, 0, 0, 0.74);
 }
 
 .content p {
   font-size: 1.3rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.637);
 }
 
 .buttons {
