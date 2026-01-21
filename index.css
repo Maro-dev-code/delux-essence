@@ -129,10 +129,10 @@ header {
   font-weight: 200;
   font-weight: bold;
   text-shadow:
-  -1px -1px 0px rgba(0, 0, 0, 0.925),
-  1px -1px 0px rgba(0, 0, 0, 0.925),
-  -1px 1px 0px rgba(0, 0, 0, 0.925),
-  1px 4px 0px rgba(0, 0, 0, 0.74);
+  -1px -1px 0px rgba(0, 0, 0, 0.637),
+  1px -1px 0px rgba(0, 0, 0, 0.596),
+  -1px 1px 0px rgba(0, 0, 0, 0.63),
+  1px 4px 0px rgba(0, 0, 0, 0.719);
 }
 
 .content p {
