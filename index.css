@@ -828,7 +828,7 @@ footer {
 
 footer {
     background-color: black;
-    height: 20vh;
+    height: 30vh;
     width: 100vw;
     margin-top: 60px;
     display: flex;
@@ -1076,6 +1076,7 @@ footer {
     object-fit: cover;
     object-position: 50% 50%;
     border-radius: 45px;
+    margin: 0 auto;
   }
 
   .display-2 {
@@ -1146,6 +1147,7 @@ footer {
     color: #464545;
     line-height: 1.5;
     margin-bottom: 50px;
+    padding: 0 10px;
   }
 
   .elegance-text a {
