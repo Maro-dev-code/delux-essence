@@ -262,6 +262,32 @@ header {
   margin: 0 10px;
 }
 
+.card-button{
+ margin: 20px 0;
+}
+
+.card-button:hover{
+ margin: 20px 0;
+ transform: translateY(-3px);
+}
+
+
+.card-btn{
+  margin: 10px 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.801);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition:  all 0.09s ease;
+  box-shadow: 1px 2px 1px rgb(94, 92, 92);
+
+}
+
+.card-btn:hover{
+  background-color: black;
+}
+
 .card:nth-child(4) {
   display: none;
 }

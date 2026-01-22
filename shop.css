@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  background: #f7f6f4;
+  color: #111;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ================= HEADER ================= */
+.shop-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #f7f6f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8vw;
+}
+
+.logo {
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.cart-link {
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -12px;
+  background: #111;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* ================= HERO ================= */
+.shop-hero {
+  padding: clamp(80px, 10vw, 140px) 8vw 60px;
+  text-align: center;
+}
+
+.shop-hero h1 {
+  font-size: clamp(2.6rem, 4vw, 3.6rem);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.shop-hero p {
+  max-width: 520px;
+  margin: auto;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* ================= FILTER BAR ================= */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding-bottom: 50px;
+}
+
+.filter {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.filter.active,
+.filter:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* ================= PRODUCT GRID ================= */
+.shop-container {
+  padding: 0 8vw 120px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 48px 32px;
+}
+
+/* ================= PRODUCT CARD ================= */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Hover swap effect */
+.product-image:hover img {
+  content: attr(data-hover);
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #111;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.add-cart-btn {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.35s ease;
+}
+
+.product-card:hover .add-cart-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-info {
+  padding: 16px 12px 24px;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.product-info p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+@media (max-width: 600px) {
+  .product-grid {
+    gap: 24px 16px;
+  }
+
+  .product-card {
+    border-radius: 8px;
+  }
+
+  .product-info h3 {
+    font-size: 1rem;
+  }
+
+  .product-info p {
+    font-size: 0.85rem;
+  }
+
+  .add-cart-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+}
+
