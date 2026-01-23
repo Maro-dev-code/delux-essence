@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | Deluxe Essence</title>
+
   <link rel="stylesheet" href="shop.css">
-   <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 </head>
+
 <body>
-   <header>
-          <a href="index.html" class="logo"
-            ><img src="img/logo1.1.png" alt="logo"
-          /></a>
-          <ul class="nav" id="nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
-          </ul>
 
-          <div id="mobile">
-            <i id="bar" class="fa-solid fa-bars"></i>
-          </div>
-        </header>
+  <!-- ================= HEADER ================= -->
+  <header class="shop-header">
+    <div class="logo">Deluxe Essence</div>
 
+    <a href="cart.html" class="cart-link">
+      Cart
+      <span class="cart-count" id="cartCount">0</span>
+    </a>
+  </header>
+
+  <!-- ================= SHOP HERO ================= -->
+  <section class="shop-hero">
+    <h1>Shop Deluxe Esence</h1>
+    <p>Curated pieces designed for comfort, confidence, and everyday elegance.</p>
+  </section>
+
+  <!-- ================= FILTER BAR ================= -->
+  <nav class="filter-bar">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="dresses">Dresses</button>
+    <button class="filter" data-filter="casual">Casual</button>
+    <button class="filter" data-filter="luxe">Luxe</button>
+    <button class="filter" data-filter="new">New</button>
+  </nav>
+
+
+  <!-- ================= PRODUCT GRID ================= -->
+  <main class="shop-container">
+    <section class="product-grid" id="productGrid">
+      <!-- Products injected via JavaScript -->
+    </section>
+  </main>
 
 
   <script src="shop.js"></script>
