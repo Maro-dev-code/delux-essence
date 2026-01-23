@@ -1638,3 +1638,16 @@ footer {
 
 
 }
+
+
+
+@media (hover: none) {
+    *:active,
+    *:focus-visible {
+        transform: inherit;
+        opacity: inherit;
+        filter: inherit;
+        box-shadow: inherit;
+    }
+}
+
