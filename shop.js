@@ -474,3 +474,18 @@ document.getElementById("productGrid").addEventListener("click", function(e) {
   }
 });
 
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let totalQty = 0;
+
+  cart.forEach((item) => {
+    totalQty += item.qty;
+  });
+
+  document.getElementById("cartCount").textContent = totalQty;
+}
+
+// Run on page load
+updateCartCount();
+
+
