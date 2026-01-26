@@ -255,6 +255,9 @@ products.forEach(function (product) {
 
   /* Add product card to the page */
   productGrid.appendChild(productCard);
+
+  
+
 });
 
 /* =====================================

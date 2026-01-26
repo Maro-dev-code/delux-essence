@@ -40,7 +40,68 @@
 
 
 
+        <!-- QUICK VIEW MODAL -->
+<div id="quickView" class="quick-view hidden">
 
+  <div class="quick-view-overlay"></div>
+
+  <div class="quick-view-content">
+    <button id="closeQuickView" class="close-btn">✕</button>
+
+    <img id="quickImage" src="" alt="Product image">
+
+    <h2 id="quickName"></h2>
+    <p id="quickPrice"></p>
+    <p id="quickDesc"></p>
+
+    <button id="quickAddToCart" class="add-to-cart">
+      Add to Cart
+    </button>
+  </div>
+
+</div>
+
+
+
+<!-- QUICK ORDER FORM MODAL -->
+<div id="orderModal" class="order-modal hidden">
+
+  <div class="overlay"></div>
+
+  <form id="orderForm" class="order-box">
+
+    <button type="button" id="closeModal" class="close-btn">✕</button>
+
+    <h3>Complete Your Order</h3>
+
+    <!-- Product Preview -->
+    <img id="productImage" src="" alt="Product Image">
+    <p id="productName"></p>
+    <p id="productPrice"></p>
+
+    <!-- Product Options -->
+    <select id="productSize" required>
+      <option value="">Select Size</option>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+
+    <input type="number" id="productQty" min="1" value="1" required>
+
+    <!-- Customer Details -->
+    <input type="text" id="customerName" placeholder="Full Name" required>
+    <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+    <input type="email" id="customerEmail" placeholder="Email Address">
+    <textarea id="customerAddress" placeholder="Delivery Address" required></textarea>
+
+    <button type="submit" class="send-btn">
+      Send Order via WhatsApp
+    </button>
+
+  </form>
+</div>
 
 
 
