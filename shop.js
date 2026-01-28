@@ -42,7 +42,7 @@ const products = [
     // Make sure the name and .PNG match exactly
     images: ["img/pic-1.PNG", "img/pic-2.PNG"],
 
-    isNew: true // shows "New" badge if true
+    isNew: true, // shows "New" badge if true
   },
 
   {
@@ -50,8 +50,8 @@ const products = [
     name: "Everyday Relaxed Set",
     price: 38000,
     category: "set",
-    images: ["img/pic-3.PNG", "img/pic-4.PNG"],
-    isNew: false
+    images: ["img/pic-3.PNG", "img/pic-4.JPG"],
+    isNew: false,
   },
 
   {
@@ -60,7 +60,7 @@ const products = [
     price: 60000,
     category: "dress",
     images: ["img/pic-5.PNG", "img/pic-6.PNG"],
-    isNew: true
+    isNew: true,
   },
 
   {
@@ -69,7 +69,7 @@ const products = [
     price: 35000,
     category: "bottom",
     images: ["img/img-1.PNG", "img/img-2.PNG"],
-    isNew: false
+    isNew: false,
   },
 
   {
@@ -78,7 +78,7 @@ const products = [
     price: 35000,
     category: "bottom",
     images: ["img/pic-2.PNG", "img/img-4.PNG"],
-    isNew: false
+    isNew: false,
   },
 
   {
@@ -87,7 +87,7 @@ const products = [
     price: 35000,
     category: "bottom",
     images: ["img/pic-4.JPG", "img/img-6.PNG"],
-    isNew: false
+    isNew: false,
   },
 
   {
@@ -96,7 +96,7 @@ const products = [
     price: 35000,
     category: "bottom",
     images: ["img/pic-5.PNG", "img/img-8.PNG"],
-    isNew: false
+    isNew: false,
   },
 
   {
@@ -105,7 +105,7 @@ const products = [
     price: 35000,
     category: "bottom",
     images: ["img/img-7.JPG", "img/img-2.PNG"],
-    isNew: false
+    isNew: false,
   },
 
   {
@@ -114,7 +114,61 @@ const products = [
     price: 35000,
     category: "bottom",
     images: ["img/img-1.PNG", "img/img-2.PNG"],
-    isNew: false
+    isNew: false,
+  },
+
+  {
+    id: "de-004",
+    name: "Classic Wide-Leg Pants",
+    price: 35000,
+    category: "bottom",
+    images: ["img/pic-6.PNG", "img/img-2.PNG"],
+    isNew: false,
+  },
+
+  {
+    id: "de-004",
+    name: "Classic Wide-Leg Pants",
+    price: 35000,
+    category: "bottom",
+    images: ["img/pic-5.PNG", "img/img-2.PNG"],
+    isNew: false,
+  },
+
+  {
+    id: "de-004",
+    name: "Classic Wide-Leg Pants",
+    price: 35000,
+    category: "bottom",
+    images: ["img/pic-4.JPG", "img/img-2.PNG"],
+    isNew: false,
+  },
+
+  {
+    id: "de-004",
+    name: "Classic Wide-Leg Pants",
+    price: 35000,
+    category: "bottom",
+    images: ["img/pic-3.PNG", "img/img-2.PNG"],
+    isNew: false,
+  },
+
+  {
+    id: "de-004",
+    name: "Classic Wide-Leg Pants",
+    price: 35000,
+    category: "bottom",
+    images: ["img/pic-2.PNG", "img/img-2.PNG"],
+    isNew: false,
+  },
+
+  {
+    id: "de-004",
+    name: "Classic Wide-Leg Pants",
+    price: 35000,
+    category: "bottom",
+    images: ["img/pic-1.PNG", "img/img-2.PNG"],
+    isNew: false,
   },
 
   {
@@ -123,7 +177,7 @@ const products = [
     price: 35000,
     category: "bottom",
     images: ["img/img-1.PNG", "img/img-2.PNG"],
-    isNew: false
+    isNew: false,
   },
 
   {
@@ -131,8 +185,8 @@ const products = [
     name: "Classic Wide-Leg Pants",
     price: 35000,
     category: "bottom",
-    images: ["img/img-1.PNG", "img/img-2.PNG"],
-    isNew: false
+    images: ["img/img-2.PNG", "img/img-2.PNG"],
+    isNew: false,
   },
 
   {
@@ -140,63 +194,9 @@ const products = [
     name: "Classic Wide-Leg Pants",
     price: 35000,
     category: "bottom",
-    images: ["img/img-1.PNG", "img/img-2.PNG"],
-    isNew: false
+    images: ["img/img-3.PNG", "img/img-2.PNG"],
+    isNew: false,
   },
-
-  {
-    id: "de-004",
-    name: "Classic Wide-Leg Pants",
-    price: 35000,
-    category: "bottom",
-    images: ["img/img-1.PNG", "img/img-2.PNG"],
-    isNew: false
-  },
-
-  {
-    id: "de-004",
-    name: "Classic Wide-Leg Pants",
-    price: 35000,
-    category: "bottom",
-    images: ["img/img-1.PNG", "img/img-2.PNG"],
-    isNew: false
-  },
-
-  {
-    id: "de-004",
-    name: "Classic Wide-Leg Pants",
-    price: 35000,
-    category: "bottom",
-    images: ["img/img-1.PNG", "img/img-2.PNG"],
-    isNew: false
-  },
-
-  {
-    id: "de-004",
-    name: "Classic Wide-Leg Pants",
-    price: 35000,
-    category: "bottom",
-    images: ["img/img-1.PNG", "img/img-2.PNG"],
-    isNew: false
-  },
-
-  {
-    id: "de-004",
-    name: "Classic Wide-Leg Pants",
-    price: 35000,
-    category: "bottom",
-    images: ["img/img-1.PNG", "img/img-2.PNG"],
-    isNew: false
-  },
-
-  {
-    id: "de-004",
-    name: "Classic Wide-Leg Pants",
-    price: 35000,
-    category: "bottom",
-    images: ["img/img-1.PNG", "img/img-2.PNG"],
-    isNew: false
-  }
 ];
 
 /* =====================================

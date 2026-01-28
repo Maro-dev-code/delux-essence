@@ -99,6 +99,11 @@ header {
   display: none;
 }
 
+h1{
+  margin: 2% 0% 0% 4%;
+
+}
+
 .cart-item {
   display: flex;
   gap: 20px;
