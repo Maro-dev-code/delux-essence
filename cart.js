@@ -1,3 +1,6 @@
+/* =====================================================
+   NAVBAR (MOBILE MENU)
+===================================================== */
 const bar = document.getElementById("bar");
 const nav = document.getElementById("nav");
 const close = document.getElementById("close");
@@ -12,162 +15,158 @@ if (close) {
   close.addEventListener("click", () => {
     nav.classList.remove("active");
   });
-} 
+}
 
-/* =====================================
-   6B. CART PAGE LOGIC
-===================================== */
-
+/* =====================================================
+   LOAD CART
+===================================================== */
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 const cartItems = document.getElementById("cartItems");
-const cartSummary = document.getElementById("cartSummary");
+const totalAmount = document.getElementById("totalAmount");
 
+/* =====================================================
+   RENDER CART ITEMS
+   Includes:
+   - + and - buttons for quantity
+   - Individual size selection
+===================================================== */
 function renderCart() {
-  cartItems.innerHTML = "";
-
-  if (cart.length === 0) {
-    cartItems.innerHTML = "<p>Your cart is empty.</p>";
-    cartSummary.innerHTML = "";
-    return;
-  }
-
+  cartItems.innerHTML = ""; // Clear previous content
   let total = 0;
 
   cart.forEach((item, index) => {
     total += item.price * item.qty;
 
-    cartItems.innerHTML += `
-      <div class="cart-item">
-        <img src="${item.img}" alt="${item.name}" width="120">
-        <div class="cart-info">
-          <h3>${item.name}</h3>
-          <p>₦${item.price.toLocaleString()}</p>
-          <div class="cart-qty">
-            <button class="decrease" data-index="${index}">-</button>
-            <span>${item.qty}</span>
-            <button class="increase" data-index="${index}">+</button>
-          </div>
-          <button class="remove" data-index="${index}">Remove</button>
-        </div>
+    // Create cart item container
+    const div = document.createElement("div");
+    div.className = "cart-item";
+
+    // HTML structure
+    div.innerHTML = `
+      <img src="${item.img}" alt="${item.name}">
+      <div class="cart-item-details">
+        <h4>${item.name}</h4>
+        <p>₦${item.price.toLocaleString()}</p>
+
+        <!-- Size selection -->
+        <label for="size-${index}">Size:</label>
+        <select id="size-${index}" data-index="${index}">
+          <option value="S" ${item.size === "S" ? "selected" : ""}>S</option>
+          <option value="M" ${item.size === "M" ? "selected" : ""}>M</option>
+          <option value="L" ${item.size === "L" ? "selected" : ""}>L</option>
+          <option value="XL" ${item.size === "XL" ? "selected" : ""}>XL</option>
+        </select>
+      </div>
+
+      <!-- Quantity and remove -->
+      <div class="cart-item-actions">
+        <button class="decrease" data-index="${index}">-</button>
+        <span class="qty">${item.qty}</span>
+        <button class="increase" data-index="${index}">+</button>
+        <button class="remove" data-index="${index}">Remove</button>
       </div>
     `;
+
+    cartItems.appendChild(div);
   });
 
-  cartSummary.innerHTML = `<h3>Total: ₦${total.toLocaleString()}</h3>`;
+  totalAmount.textContent = total.toLocaleString();
+
+  // ===== EVENT LISTENERS =====
+
+  // Size selection
+  const sizeSelects = cartItems.querySelectorAll("select");
+  sizeSelects.forEach((select) => {
+    select.addEventListener("change", (e) => {
+      const idx = e.target.dataset.index;
+      cart[idx].size = e.target.value;
+      localStorage.setItem("cart", JSON.stringify(cart));
+    });
+  });
+
+  // Increase quantity
+  const increaseBtns = cartItems.querySelectorAll(".increase");
+  increaseBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const idx = e.target.dataset.index;
+      cart[idx].qty += 1;
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    });
+  });
+
+  // Decrease quantity
+  const decreaseBtns = cartItems.querySelectorAll(".decrease");
+  decreaseBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const idx = e.target.dataset.index;
+      if (cart[idx].qty > 1) {
+        cart[idx].qty -= 1;
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    });
+  });
+
+  // Remove item
+  const removeBtns = cartItems.querySelectorAll(".remove");
+  removeBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const idx = e.target.dataset.index;
+      cart.splice(idx, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    });
+  });
 }
 
+/* =====================================================
+   INITIAL RENDER
+===================================================== */
 renderCart();
 
-/* =====================================
-   CART BUTTONS LOGIC
-===================================== */
+/* =====================================================
+   CHECKOUT FORM
+   Sends WhatsApp message with:
+   - Item name, price, quantity, size
+   - Image URL
+   - Customer info
+===================================================== */
+const checkoutForm = document.getElementById("checkoutForm");
 
-cartItems.addEventListener("click", function (e) {
-  const index = e.target.dataset.index;
-  if (e.target.classList.contains("increase")) {
-    cart[index].qty += 1;
-  }
-  if (e.target.classList.contains("decrease")) {
-    cart[index].qty -= 1;
-    if (cart[index].qty < 1) cart.splice(index, 1);
-  }
-  if (e.target.classList.contains("remove")) {
-    cart.splice(index, 1);
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-  renderCart();
-});
-
-const quickView = document.getElementById("quickView");
-const quickImage = document.getElementById("quickImage");
-const quickName = document.getElementById("quickName");
-const quickPrice = document.getElementById("quickPrice");
-const quickDesc = document.getElementById("quickDesc");
-const closeQuickView = document.getElementById("closeQuickView");
-
-function openQuickView(product) {
-  quickImage.src = "img/" + product.images[0]; // CHANGE IMAGE PATH HERE
-  quickName.textContent = product.name;
-  quickPrice.textContent = "₦" + product.price.toLocaleString();
-  quickDesc.textContent =
-    product.description || "Beautifully designed for everyday comfort.";
-
-  quickView.classList.remove("hidden");
-}
-
-card.addEventListener("click", function () {
-  openQuickView(product);
-});
-
-closeQuickView.addEventListener("click", function () {
-  quickView.classList.add("hidden");
-});
-
-document
-  .querySelector(".quick-view-overlay")
-  .addEventListener("click", function () {
-    quickView.classList.add("hidden");
-  });
-
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    quickView.classList.add("hidden");
-  }
-});
-
-
-const modal = document.getElementById("orderModal");
-const closeModal = document.getElementById("closeModal");
-
-const productImage = document.getElementById("productImage");
-const productName = document.getElementById("productName");
-const productPrice = document.getElementById("productPrice");
-
-let selectedProduct = null;
-
-/* OPEN FORM */
-function openOrderForm(product) {
-  selectedProduct = product;
-
-  productImage.src = "img/" + product.image; // CHANGE IMAGE FOLDER HERE
-  productName.textContent = product.name;
-  productPrice.textContent = "₦" + product.price.toLocaleString();
-
-  modal.classList.remove("hidden");
-}
-
-/* CLOSE FORM */
-closeModal.addEventListener("click", function () {
-  modal.classList.add("hidden");
-});
-
-/* SEND TO WHATSAPP */
-document.getElementById("orderForm").addEventListener("submit", function (e) {
+checkoutForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const size = document.getElementById("productSize").value;
-  const qty = document.getElementById("productQty").value;
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
+
+  // Customer info
   const name = document.getElementById("customerName").value;
-  const phone = document.getElementById("customerPhone").value;
   const email = document.getElementById("customerEmail").value;
+  const phone = document.getElementById("customerPhone").value;
   const address = document.getElementById("customerAddress").value;
 
-  let message = `Hello Deluxe Essence 👗✨%0A%0A`;
-  message += `NEW ORDER%0A%0A`;
-  message += `Product: ${selectedProduct.name}%0A`;
-  message += `Size: ${size}%0A`;
-  message += `Quantity: ${qty}%0A`;
-  message += `Price: ₦${selectedProduct.price.toLocaleString()}%0A`;
-  message += `Image: https://yourdomain.com/img/${selectedProduct.image}%0A%0A`;
-  message += `Customer Name: ${name}%0A`;
-  message += `Phone: ${phone}%0A`;
-  message += `Email: ${email}%0A`;
-  message += `Delivery Address: ${address}%0A`;
+  // Construct WhatsApp message
+  let message = `Hello Deluxe Essence!%0A%0AOrder Details:%0A`;
+  cart.forEach((item) => {
+    const imageUrl = `${window.location.origin}/${item.img}`; // Make sure your images are publicly accessible
+    message += `- ${item.name} | ₦${item.price.toLocaleString()} | Qty: ${item.qty} | Size: ${item.size || "N/A"}%0A  Image: ${imageUrl}%0A`;
+  });
 
-  const whatsappNumber = "2349011659275";
-  window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
+  message += `%0ACustomer Info:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AAddress: ${address}`;
 
-  modal.classList.add("hidden");
+  // WhatsApp number (replace with real number)
+  const whatsappNumber = "2347041468207"; // <-- replace with your real WhatsApp number
+  const url = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+  // Open WhatsApp
+  window.open(url, "_blank");
+
+  // Clear cart
+  cart = [];
+  localStorage.removeItem("cart");
+  renderCart();
+  checkoutForm.reset();
 });
-
