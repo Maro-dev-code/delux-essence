@@ -86,7 +86,7 @@ const products = [
     name: "Soft Linen Midi Dress 001",
     price: 45000,
     category: "dress",
-    images: ["img/img-9.png", "img/pic-2.png"],
+    images: ["img/img-9.PNG", "img/pic-2.png"],
     isNew: true,
   },{
     id: "de-001",
@@ -147,7 +147,7 @@ const products = [
     name: "Classic Wide-Leg Pants 008",
     price: 35000,
     category: "bottom",
-    images: ["img/img-5.png", "img/img-6.png"],
+    images: ["img/img-5.PNG", "img/img-6.png"],
     isNew: false,
   },
   {
@@ -155,7 +155,7 @@ const products = [
     name: "Soft Linen Midi Dress 009",
     price: 45000,
     category: "dress",
-    images: ["img/pic-1.png", "img/pic-2.png"],
+    images: ["img/pic-1.PNG", "img/pic-2.png"],
     isNew: true,
   },
   {
