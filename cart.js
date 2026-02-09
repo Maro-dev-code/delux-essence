@@ -158,7 +158,7 @@ checkoutForm.addEventListener("submit", (e) => {
   message += `%0ACustomer Info:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AAddress: ${address}`;
 
   // WhatsApp number (replace with real number)
-  const whatsappNumber = "2347041468207"; // <-- replace with your real WhatsApp number
+  const whatsappNumber = "2349136810201"; // <-- replace with your real WhatsApp number
   const url = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   // Open WhatsApp
@@ -166,7 +166,7 @@ checkoutForm.addEventListener("submit", (e) => {
 
   // Clear cart
   cart = [];
-  localStorage.removeItem("cart");
+  // localStorage.removeItem("cart");
   renderCart();
   checkoutForm.reset();
 });

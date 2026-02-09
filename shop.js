@@ -26,125 +26,125 @@ if (close) {
 const products = [
   {
     id: "de-001",
-    name: "Soft Linen Midi Dress",
+    name: "Soft Linen Midi Dress 01",
     price: 45000,
     category: "set",
-    images: ["img/pic-1.png", "img/pic-2.png"],
+    images: ["img/img-1.PNG", "img/pic-2.png"],
     isNew: true,
   },
   {
     id: "de-001",
-    name: "Soft Linen Midi Dress",
+    name: "Soft Linen Midi Dress 02",
     price: 45000,
     category: "set",
-    images: ["img/pic-2.png", "img/pic-2.png"],
+    images: ["img/img-2.PNG", "img/pic-2.png"],
     isNew: true,
   },{
     id: "de-001",
-    name: "Soft Linen Midi Dress",
+    name: "Soft Linen Midi Dress 03",
     price: 45000,
     category: "dress",
-    images: ["img/pic-3.png", "img/pic-2.png"],
+    images: ["img/img-3.PNG", "img/pic-2.png"],
     isNew: true,
   },{
     id: "de-001",
-    name: "Soft Linen Midi Dress",
+    name: "Soft Linen Midi Dress 04",
     price: 45000,
     category: "dress",
-    images: ["img/pic-4.jpg", "img/pic-2.png"],
+    images: ["img/img-4.PNG", "img/pic-2.png"],
     isNew: true,
   },{
     id: "de-001",
-    name: "Soft Linen Midi Dress",
+    name: "Soft Linen Midi Dress 06",
     price: 45000,
     category: "set",
-    images: ["img/pic-5.png", "img/pic-2.png"],
+    images: ["img/img-5.PNG", "img/pic-2.png"],
     isNew: true,
   },{
     id: "de-001",
-    name: "Soft Linen Midi Dress",
-    price: 45000,
-    category: "dress",
-    images: ["img/img-1.png", "img/pic-2.png"],
-    isNew: true,
-  },{
-    id: "de-001",
-    name: "Soft Linen Midi Dress",
-    price: 45000,
-    category: "dress",
-    images: ["img/img-2.png", "img/pic-2.png"],
-    isNew: true,
-  },{
-    id: "de-001",
-    name: "Soft Linen Midi Dress",
-    price: 45000,
-    category: "dress",
-    images: ["img/img-3.png", "img/pic-2.png"],
-    isNew: true,
-  },{
-    id: "de-001",
-    name: "Soft Linen Midi Dress",
-    price: 45000,
-    category: "dress",
-    images: ["img/img-4.png", "img/pic-2.png"],
-    isNew: true,
-  },{
-    id: "de-001",
-    name: "Soft Linen Midi Dress",
-    price: 45000,
-    category: "set",
-    images: ["img/img-5.png", "img/pic-2.png"],
-    isNew: true,
-  },{
-    id: "de-001",
-    name: "Soft Linen Midi Dress",
+    name: "Soft Linen Midi Dress 07",
     price: 45000,
     category: "dress",
     images: ["img/img-6.png", "img/pic-2.png"],
     isNew: true,
   },{
     id: "de-001",
-    name: "Soft Linen Midi Dress",
+    name: "Soft Linen Midi Dress 08",
     price: 45000,
     category: "dress",
-    images: ["img/img-7.jpg", "img/pic-2.png"],
+    images: ["img/img-7.JPG", "img/pic-2.png"],
+    isNew: true,
+  },{
+    id: "de-001",
+    name: "Soft Linen Midi Dress 09",
+    price: 45000,
+    category: "dress",
+    images: ["img/img-8.png", "img/pic-2.png"],
+    isNew: true,
+  },{
+    id: "de-001",
+    name: "Soft Linen Midi Dress 001",
+    price: 45000,
+    category: "dress",
+    images: ["img/img-9.png", "img/pic-2.png"],
+    isNew: true,
+  },{
+    id: "de-001",
+    name: "Soft Linen Midi Dress 002",
+    price: 45000,
+    category: "set",
+    images: ["img/pic-1.PNG", "img/pic-2.png"],
+    isNew: true,
+  },{
+    id: "de-001",
+    name: "Soft Linen Midi Dress 003",
+    price: 45000,
+    category: "dress",
+    images: ["img/pic-2.PNG", "img/pic-2.png"],
+    isNew: true,
+  },{
+    id: "de-001",
+    name: "Soft Linen Midi Dress 004",
+    price: 45000,
+    category: "dress",
+    images: ["img/pic-3.PNG", "img/pic-2.png"],
     isNew: true,
   },
   {
     id: "de-002",
-    name: "Everyday Relaxed Set",
+    name: "Everyday Relaxed Set 005",
     price: 38000,
     category: "set",
-    images: ["img/img-8.png", "img/pic-4.jpg"],
+    images: ["img/pic-4.JPG", "img/pic-4.jpg"],
     isNew: false,
   },
   {
     id: "de-003",
-    name: "Elegant Evening Gown",
+    name: "Elegant Evening Gown 006",
     price: 60000,
     category: "dress",
-    images: ["img/img-9.png", "img/pic-6.png"],
+    images: ["img/pic-5.PNG", "img/pic-6.png"],
     isNew: true,
   },
   {
     id: "de-004",
-    name: "Classic Wide-Leg Pants",
+    name: "Classic Wide-Leg Pants 105",
     price: 35000,
     category: "bottom",
-    images: ["img/img-1.png", "img/img-2.png"],
+    images: ["img/pic-6.PNG", "img/img-2.png"],
     isNew: false,
   },
   {
     id: "de-005",
-    name: "Classic Wide-Leg Pants",
+    name: "Classic Wide-Leg Pants 007",
     price: 35000,
     category: "bottom",
-    images: ["img/img-3.png", "img/img-4.png"],
+    images: ["img/pic-1.PNG", "img/img-4.png"],
     isNew: false,
   },
   {
     id: "de-006",
-    name: "Classic Wide-Leg Pants",
+    name: "Classic Wide-Leg Pants 008",
     price: 35000,
     category: "bottom",
     images: ["img/img-5.png", "img/img-6.png"],
@@ -152,7 +152,7 @@ const products = [
   },
   {
     id: "de-001",
-    name: "Soft Linen Midi Dress",
+    name: "Soft Linen Midi Dress 009",
     price: 45000,
     category: "dress",
     images: ["img/pic-1.png", "img/pic-2.png"],
@@ -160,42 +160,42 @@ const products = [
   },
   {
     id: "de-002",
-    name: "Everyday Relaxed Set",
+    name: "Everyday Relaxed Set 010",
     price: 38000,
     category: "set",
-    images: ["img/pic-3.png", "img/pic-4.jpg"],
+    images: ["img/pic-3.PNG", "img/pic-4.jpg"],
     isNew: false,
   },
   {
     id: "de-003",
-    name: "Elegant Evening Gown",
+    name: "Elegant Evening Gown 011",
     price: 60000,
     category: "dress",
-    images: ["img/pic-5.png", "img/pic-6.png"],
+    images: ["img/pic-5.PNG", "img/pic-6.png"],
     isNew: true,
   },
   {
     id: "de-004",
-    name: "Classic Wide-Leg Pants",
+    name: "Classic Wide-Leg Pants 012",
     price: 35000,
     category: "bottom",
-    images: ["img/img-1.png", "img/img-2.png"],
+    images: ["img/img-1.PNG", "img/img-2.png"],
     isNew: false,
   },
   {
     id: "de-005",
-    name: "Classic Wide-Leg Pants",
+    name: "Classic Wide-Leg Pants 013",
     price: 35000,
     category: "bottom",
-    images: ["img/img-3.png", "img/img-4.png"],
+    images: ["img/img-4.PNG", "img/img-4.png"],
     isNew: false,
   },
   {
     id: "de-006",
-    name: "Classic Wide-Leg Pants",
+    name: "Classic Wide-Leg Pants 014",
     price: 35000,
     category: "bottom",
-    images: ["img/img-5.png", "img/img-6.png"],
+    images: ["img/img-9.PNG", "img/img-6.png"],
     isNew: false,
   },
 ];
@@ -273,30 +273,30 @@ function enableImageToggle() {
   });
 }
 
-function enableImageToggle() {
-  const images = document.querySelectorAll(".product-image img");
+// function enableImageToggle() {
+//   const images = document.querySelectorAll(".product-image img");
 
-  images.forEach((img) => {
-    const first = img.dataset.first;
-    const second = img.dataset.second;
-    let showingFirst = true;
+//   images.forEach((img) => {
+//     const first = img.dataset.first;
+//     const second = img.dataset.second;
+//     let showingFirst = true;
 
-    function fadeSwitch(newSrc) {
-      img.style.opacity = 0;
-      setTimeout(() => {
-        img.src = newSrc;
-        img.style.opacity = 1;
-      }, 200);
-    }
+//     function fadeSwitch(newSrc) {
+//       img.style.opacity = 0;
+//       setTimeout(() => {
+//         img.src = newSrc;
+//         img.style.opacity = 1;
+//       }, 200);
+//     }
 
-    img.addEventListener("mouseenter", () => fadeSwitch(second));
-    img.addEventListener("mouseleave", () => fadeSwitch(first));
-    img.addEventListener("click", () => {
-      showingFirst = !showingFirst;
-      fadeSwitch(showingFirst ? first : second);
-    });
-  });
-}
+//     img.addEventListener("mouseenter", () => fadeSwitch(second));
+//     img.addEventListener("mouseleave", () => fadeSwitch(first));
+//     img.addEventListener("click", () => {
+//       showingFirst = !showingFirst;
+//       fadeSwitch(showingFirst ? first : second);
+//     });
+//   });
+// }
 
 
 /* =====================================================
