@@ -409,6 +409,12 @@ header {
   }
 
   .product-image {
-    height: 360px;
+    height: 520px;
+   
+  }
+
+  .product-image img{
+    object-fit: cover;
+    object-position: 20% 20%;
   }
 }
